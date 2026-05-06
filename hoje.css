@@ -1,0 +1,161 @@
+/* fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Noto Sans";
+}
+
+/* evita bugs de tamanho */
+body * {
+    box-sizing: border-box;
+}
+
+/* ===== FUNDO PRINCIPAL ===== */
+.main-login {
+    width: 100vw;
+    height: 100vh;
+
+    /* fundo com imagem rosa */
+    background: url('foto.png(1).jpg') no-repeat center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== LADO ESQUERDO ===== */
+.left-login {
+    width: 50vw;
+}
+
+.left-login > h1 {
+    font-size: 3vw;
+    color: white;
+}
+
+.left-login-image {
+    width: 35vw;
+}
+
+/* ===== LADO DIREITO ===== */
+.right-login {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CARD LOGIN (EFEITO VIDRO) ===== */
+.card-login {
+    width: 60%;
+    padding: 30px;
+
+    /* transparência */
+    background: rgba(255, 255, 255, 0.1);
+
+    /* efeito vidro */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    /* borda suave */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* imagem do título */
+.logo-login {
+    width: 100px; /* tamanho da imagem */
+    margin-bottom: 10;
+}
+
+
+/* ===== INPUTS ===== */
+.textfield {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.textfield label {
+    color: white;
+}
+
+/* campo de texto */
+.textfield input {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    /* leve transparência */
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+    outline: none;
+}
+
+/* placeholder */
+.textfield input::placeholder {
+    color: #eee;
+}
+
+/* ===== BOTÃO ===== */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    /* rosa degradê */
+    background: linear-gradient(90deg, #ff4b7d, #ff6a9f);
+
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* efeito hover */
+.btn-login:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login {
+        display: none;
+    }
+
+    .right-login {
+        width: 100%;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
